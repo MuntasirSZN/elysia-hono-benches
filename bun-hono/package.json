@@ -1,0 +1,15 @@
+{
+  "name": "bun-hono-benchmark",
+  "version": "1.0.0",
+  "description": "Bun + Hono benchmark",
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun --watch index.ts"
+  },
+  "dependencies": {
+    "hono": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  }
+}

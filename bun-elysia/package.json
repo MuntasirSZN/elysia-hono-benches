@@ -1,0 +1,15 @@
+{
+  "name": "bun-elysia-benchmark",
+  "version": "1.0.0",
+  "description": "Bun + Elysia benchmark",
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun --watch index.ts"
+  },
+  "dependencies": {
+    "elysia": "^1.3.8"
+  },
+  "devDependencies": {
+    "bun-types": "^1.2.19"
+  }
+}

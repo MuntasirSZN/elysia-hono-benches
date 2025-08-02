@@ -1,0 +1,14 @@
+{
+  "name": "node-elysia-benchmark",
+  "version": "1.0.0",
+  "description": "Node.js + Elysia benchmark",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "elysia": "latest",
+    "@elysiajs/node": "latest"
+  }
+}
