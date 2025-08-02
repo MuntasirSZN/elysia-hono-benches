@@ -124,11 +124,11 @@ Running benchmark for 30 seconds with 12 threads and 400 connections...
 Running 30s test @ http://localhost:3000/api/test
   12 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     5.44ms    3.17ms  42.44ms   85.65%
-    Req/Sec     6.40k     2.57k   20.47k    63.99%
-  2295151 requests in 30.10s, 372.10MB read
-Requests/sec:  76249.61
-Transfer/sec:     12.36MB
+    Latency     5.63ms    3.88ms  62.01ms   83.32%
+    Req/Sec     6.34k     3.42k   13.25k    54.20%
+  2273786 requests in 30.10s, 368.64MB read
+Requests/sec:  75546.73
+Transfer/sec:     12.25MB
 error: script "start" was terminated by signal SIGTERM (Polite quit request)
 
 🔥 Testing bun-elysia on port 3001
@@ -140,11 +140,11 @@ Running benchmark for 30 seconds with 12 threads and 400 connections...
 Running 30s test @ http://localhost:3001/api/test
   12 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     4.02ms    2.52ms  46.98ms   85.53%
-    Req/Sec     8.71k     4.71k  190.62k    77.90%
-  3121254 requests in 30.10s, 511.99MB read
-Requests/sec: 103700.17
-Transfer/sec:     17.01MB
+    Latency     3.99ms    2.82ms  40.32ms   82.10%
+    Req/Sec     8.98k     5.17k   19.28k    58.96%
+  3220210 requests in 30.10s, 528.22MB read
+Requests/sec: 106993.21
+Transfer/sec:     17.55MB
 error: script "start" was terminated by signal SIGTERM (Polite quit request)
 
 🔥 Testing node-hono on port 3002
@@ -155,15 +155,26 @@ Running benchmark for 30 seconds with 12 threads and 400 connections...
 Running 30s test @ http://localhost:3002/api/test
   12 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    15.57ms   81.45ms   1.65s    98.35%
-    Req/Sec     4.96k     1.78k   73.69k    84.65%
-  1758437 requests in 30.10s, 365.58MB read
-Requests/sec:  58423.87
-Transfer/sec:     12.15MB
+    Latency    13.04ms   66.15ms   1.28s    98.40%
+    Req/Sec     5.74k     1.34k   33.20k    86.18%
+  2032269 requests in 30.10s, 422.51MB read
+Requests/sec:  67519.85
+Transfer/sec:     14.04MB
 
 🔥 Testing node-elysia on port 3003
 Starting server...
-❌ Server failed to start
+🦊 Elysia is running at http://localhost:3003
+✅ Server is running
+Running benchmark for 30 seconds with 12 threads and 400 connections...
+Running 30s test @ http://localhost:3003/api/test
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    23.95ms  111.11ms   2.00s    98.11%
+    Req/Sec     3.06k   587.94    13.88k    90.54%
+  1076017 requests in 30.10s, 225.76MB read
+  Socket errors: connect 0, read 0, write 0, timeout 49
+Requests/sec:  35747.86
+Transfer/sec:      7.50MB
 
 🎉 All benchmarks completed!
 ```
