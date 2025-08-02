@@ -26,24 +26,28 @@ All dependencies are managed using Bun package manager and use the latest versio
 ## Running Individual Servers
 
 ### Bun + Hono (port 3000)
+
 ```bash
 cd bun-hono
 bun run start
 ```
 
 ### Bun + Elysia (port 3001)
+
 ```bash
 cd bun-elysia
 bun run start
 ```
 
 ### Node.js + Hono (port 3002)
+
 ```bash
 cd node-hono
 bun run start  # or node index.js
 ```
 
 ### Node.js + Elysia (port 3003)
+
 ```bash
 cd node-elysia
 bun run start  # or node index.js
@@ -64,6 +68,7 @@ Each server provides the same endpoints:
 Install either `oha` (recommended) or `wrk` for load testing:
 
 #### oha (recommended - faster and more modern)
+
 ```bash
 # Install via Cargo (Rust package manager)
 cargo install oha
@@ -73,6 +78,7 @@ cargo install oha
 ```
 
 #### wrk (alternative)
+
 ```bash
 # Ubuntu/Debian
 sudo apt install wrk
@@ -96,6 +102,7 @@ The script automatically detects which tool is available (prefers oha over wrk) 
 Start a server manually and run:
 
 #### Using oha
+
 ```bash
 # Example for bun-hono
 cd bun-hono && bun run start &
@@ -104,6 +111,7 @@ kill %1
 ```
 
 #### Using wrk
+
 ```bash
 # Example for bun-hono
 cd bun-hono && bun run start &
@@ -114,11 +122,12 @@ kill %1
 ## Expected Results
 
 The benchmarks will show:
+
 - Requests/sec
 - Latency statistics (avg, stdev, max)
 - Transfer rate
 
-*Note: Actual results may vary based on hardware, system load, and network conditions.*
+_Note: Actual results may vary based on hardware, system load, and network conditions._
 
 ## Results
 
@@ -441,7 +450,8 @@ pie
 ---
 
 ### Average Latency (ms)
-*(Lower is better)*
+
+_(Lower is better)_
 
 ```mermaid
 pie
@@ -451,7 +461,8 @@ pie
     "node-hono (11.61 ms)" : 8.6
     "node-elysia (19.34 ms)" : 5.2
 ```
-*(Proportional slices to 1/latency, showing "relative speed")*
+
+_(Proportional slices to 1/latency, showing "relative speed")_
 
 ---
 
@@ -481,12 +492,12 @@ flowchart TD
 
 #### Response Time Distribution (Percentile Table)
 
-| Framework      | 50% (ms) | 75% (ms) | 90% (ms) | 95% (ms) | 99% (ms) |
-|----------------|----------|----------|----------|----------|----------|
-| bun-elysia     | 5.58     | 6.91     | 9.42     | 11.53    | 16.15    |
-| bun-hono       | 7.16     | 8.70     | 11.32    | 13.87    | 22.72    |
-| node-hono      | 10.91    | 11.15    | 12.88    | 13.43    | 25.50    |
-| node-elysia    | 17.33    | 20.41    | 24.24    | 26.65    | 35.72    |
+| Framework   | 50% (ms) | 75% (ms) | 90% (ms) | 95% (ms) | 99% (ms) |
+| ----------- | -------- | -------- | -------- | -------- | -------- |
+| bun-elysia  | 5.58     | 6.91     | 9.42     | 11.53    | 16.15    |
+| bun-hono    | 7.16     | 8.70     | 11.32    | 13.87    | 22.72    |
+| node-hono   | 10.91    | 11.15    | 12.88    | 13.43    | 25.50    |
+| node-elysia | 17.33    | 20.41    | 24.24    | 26.65    | 35.72    |
 
 ---
 

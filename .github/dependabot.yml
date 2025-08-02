@@ -1,0 +1,69 @@
+version: 2
+updates:
+  # Bun + Hono project
+  - package-ecosystem: "npm"
+    directory: "/bun-hono"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+      timezone: "UTC"
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  # Bun + Elysia project
+  - package-ecosystem: "npm"
+    directory: "/bun-elysia"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+      timezone: "UTC"
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  # Node.js + Hono project
+  - package-ecosystem: "npm"
+    directory: "/node-hono"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+      timezone: "UTC"
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  # Node.js + Elysia project
+  - package-ecosystem: "npm"
+    directory: "/node-elysia"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+      timezone: "UTC"
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "deps"
+      include: "scope"
