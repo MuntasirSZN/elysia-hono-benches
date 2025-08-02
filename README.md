@@ -355,7 +355,7 @@ Error distribution:
 <details>
 <summary><h3>Using <code>wrk</code></summary>
 
-❯ ./benchmark.sh
+```sh
 🚀 Starting benchmark for all configurations...
 =================================================
 
@@ -421,6 +421,7 @@ Requests/sec:  35747.86
 Transfer/sec:      7.50MB
 
 🎉 All benchmarks completed!
+```
 
 </details>
 
